@@ -1,0 +1,307 @@
+[
+    {
+        "chemical": "Nu",
+        "name": "Neutronium",
+        "block": 1
+    },
+    {
+        "chemical": "H",
+        "name": "Hydrogen",
+        "block": 1.008
+    },
+    {
+        "chemical": "He",
+        "name": "Helium",
+        "block": 4.003
+    },
+    {
+        "chemical": "Li",
+        "name": "Lithium",
+        "block": 6.94
+    },
+    {
+        "chemical": "Be",
+        "name": "Beryllium",
+        "block": 9.012
+    },
+    {
+        "chemical": "B",
+        "name": "Boron",
+        "block": 10.81
+    },
+    {
+        "chemical": "C",
+        "name": "Carbon",
+        "block": 12.011
+    },
+    {
+        "chemical": "N",
+        "name": "Nitrogen",
+        "block": 14.0067
+    },
+    {
+        "chemical": "O",
+        "name": "Oxygen",
+        "block": 15.999
+    },
+    {
+        "chemical": "F",
+        "name": "Fluorine",
+        "block": 18.998
+    },
+    {
+        "chemical": "Ne",
+        "name": "Neon",
+        "block": 20.18
+    },
+    {
+        "chemical": "Na",
+        "name": "Sodium",
+        "block": 22.99
+    },
+    {
+        "chemical": "Mg",
+        "name": "Magnesium",
+        "block": 24.305
+    },
+    {
+        "chemical": "Al",
+        "name": "Aluminium",
+        "block": 26.982
+    },
+    {
+        "chemical": "Si",
+        "name": "Silicon",
+        "block": 28.086
+    },
+    {
+        "chemical": "P",
+        "name": "Phosphorus",
+        "block": 30.974
+    },
+    {
+        "chemical": "S",
+        "name": "Sulfur",
+        "block": 32.065
+    },
+    {
+        "chemical": "Cl",
+        "name": "Chlorine",
+        "block": 35.453
+    },
+    {
+        "chemical": "Ar",
+        "name": "Argon",
+        "block": 39.948
+    },
+    {
+        "chemical": "K",
+        "name": "Potassium",
+        "block": 39.098
+    },
+    {
+        "chemical": "Ca",
+        "name": "Calcium",
+        "block": 40.078
+    },
+    {
+        "chemical": "Sc",
+        "name": "Scandium",
+        "block": 44.956
+    },
+    {
+        "chemical": "Ti",
+        "name": "Titanium",
+        "block": 47.867
+    },
+    {
+        "chemical": "V",
+        "name": "Vanadium",
+        "block": 50.942
+    },
+    {
+        "chemical": "Cr",
+        "name": "Chromium",
+        "block": 51.996
+    },
+    {
+        "chemical": "Mn",
+        "name": "Manganese",
+        "block": 54.938
+    },
+    {
+        "chemical": "Fe",
+        "name": "Iron",
+        "block": 55.845
+    },
+    {
+        "chemical": "Co",
+        "name": "Cobalt",
+        "block": 58.933
+    },
+    {
+        "chemical": "Nickel",
+        "name": "Ni",
+        "block": 58.693
+    },
+    {
+        "chemical": "Cu",
+        "name": "Copper",
+        "block": 63.546
+    },
+    {
+        "chemical": "Zn",
+        "name": "Zinc",
+        "block": 65.380
+    },
+    {
+        "chemical": "Ga",
+        "name": "Gallium",
+        "block": 69.723
+    },
+    {
+        "chemical": "Ge",
+        "name": "Germanium",
+        "block": 72.640
+    },
+    {
+        "chemical": "As",
+        "name": "Arsenic",
+        "block": 74.922
+    },
+    {
+        "chemical": "Se",
+        "name": "Selenium",
+        "block": 78.960
+    },
+    {
+        "chemical": "Br",
+        "name": "Bromine",
+        "block": 79.904
+    },
+    {
+        "chemical": "Kr",
+        "name": "Krypton",
+        "block": 83.798
+    },
+    {
+        "chemical": "Rb",
+        "name": "Rubidium",
+        "block": 85.468
+    },
+    {
+        "chemical": "Sr",
+        "name": "Strontium",
+        "block": 87.620
+    },
+    {
+        "chemical": "Y",
+        "name": "Yttrium",
+        "block": 88.906
+    },
+    {
+        "chemical": "Zr",
+        "name": "Zirconium",
+        "block": 91.224
+    },
+    {
+        "chemical": "Nb",
+        "name": "Niobium",
+        "block": 92.906
+    },
+    {
+        "chemical": "Mo",
+        "name": "Molybdenum",
+        "block": 95.950
+    },
+    {
+        "chemical": "Tc",
+        "name": "Technetium",
+        "block": 98
+    },
+    {
+        "chemical": "Ru",
+        "name": "Ruthenium",
+        "block": 101.07
+    },
+    {
+        "chemical": "Rh",
+        "name": "Rhodium",
+        "block": 102.91
+    },
+    {
+        "chemical": "Pd",
+        "name": "Palladium",
+        "block": 106.42
+    },
+    {
+        "chemical": "Ag",
+        "name": "Silver",
+        "block": 107.87
+    },
+    {
+        "chemical": "Cd",
+        "name": "Cadmium",
+        "block": 112.41
+    },
+    {
+        "chemical": "In",
+        "name": "Indium",
+        "block": 114.82
+    },
+    {
+        "chemical": "Sn",
+        "name": "Tin",
+        "block": 118.71
+    },
+    {
+        "chemical": "Sb",
+        "name": "Antimony",
+        "block": 121.76
+    },
+    {
+        "chemical": "Te",
+        "name": "Tellurium",
+        "block": 127.60
+    },
+    {
+        "chemical": "I",
+        "name": "Iodine",
+        "block": 126.90
+    },
+    {
+        "chemical": "Xe",
+        "name": "Xenon",
+        "block": 131.29
+    },
+    {
+        "chemical": "Cs",
+        "name": "Caesium",
+        "block": 132.91
+    },
+    {
+        "chemical": "Ba",
+        "name": "Barium",
+        "block": 137.33
+    },
+    {
+        "chemical": "La",
+        "name": "Lanthanum",
+        "block": 138.91
+    },
+    {
+        "chemical": "Ce",
+        "name": "Cerium",
+        "block": 140.12
+    },
+    {
+        "chemical": "Pr",
+        "name": "Praseodymium",
+        "block": 140.91
+    },
+    {
+        "chemical": "Nd",
+        "name": "Neodymium",
+        "block": 144.24
+    }
+]

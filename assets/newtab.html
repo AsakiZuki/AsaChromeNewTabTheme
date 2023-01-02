@@ -1,0 +1,258 @@
+<!DOCTYPE My Chrome NewTab Code>
+
+<html>
+
+<head id="asa_header">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="My Custom Chrome NewTab Design :D">
+    <meta name="author" content="Asaki Zuki">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+
+    <link rel="stylesheet" href="newtab.css">
+    <link rel="stylesheet" href="loading_screen.css">
+    <link rel="stylesheet" href="settingStyle.css">
+    <link rel="icon" id="web_icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="newtab_body" class="newtab_theme">
+    <img id="image_background" class="asaimage_background"></img>
+    <audio class="position: absolute;" id="keysounds"></audio>
+    <video autoplay loop id="asa_display_live_wallpaper" class="video_background"></video>
+    <div id="asa_search_panel" class="search_panel">
+        <button id="search_action" class="search_button">
+            <i class="fa fa-search"></i>
+        </button>
+        <input autocomplete="off" type="text" id="search_value" class="searchbar" placeholder="Enter your search...">
+        <select id="asa_search_selected" class="asa_select_dropdown">
+            <option value="https://www.google.com/search?q=" style="display: none;">Default</option>
+        </select>
+    </div>
+    <div id="clock_panel" class="clock_panel">
+    </div>
+    <div id="asa_date_panel" class="date_panel">
+        <a class="asa_time_day" id="asa_date"></a>
+    </div>
+    <div id="weather_panel" class="asaWeatherPanel">
+        <span>
+            <a class="cityName" id="weatherCity"></a><br>
+            <a class="weatherTemperature" id="weatherTemperature"></a>
+        </span>
+
+        <img draggable="false" class="weather_icons" id="weather_icons">
+    </div>
+    <div id="asa_setting_panel" class="setting_panel">
+        <button id="setting_button" class="setting_button">
+            <i class="fa fa-gear"></i>
+            <span class="setting_hover_text">Setting</span>
+        </button>
+    </div>
+    <div id="shortcutScreenTableBackground" class="shortcutScreenTableBackground">
+        <div id="shortcutScreenTable" class="shortcutScreenTable">
+            <div class="SearchBarPanel">
+                <a class="shortcutTitle">Website Shortcut</a>
+
+                <input autocomplete="off" id="searchShortcutItem" class="ShortcutSearchBar"
+                    placeholder="Search your item...">
+                <button id="clearSearchShortcutBtn" class="clearSearchBtn">Clear Search</button>
+            </div>
+
+            <div class="shortcutItems" id="shortcutScollbar">
+                <div id="asaScrollItem"> </div>
+            </div>
+        </div>
+    </div>
+    <div id="asa_website_shortcut" class="webside_shortcut">
+        <i class="fa fa-caret-up arrow_button"></i>
+        <span id="shortcut_button_panel" class="button_shortcut">
+        </span>
+    </div>
+    <div id="setting_screen" class="full_screen_setting">
+        <div id="shortcutNoticationSection" class="shortcutNotication">
+            <a id="shortcutNoticationLabel"></a><br>
+            <button style="right: 0px; position: absolute; width: 65px; margin-left: 2.5px; margin-top: 3px;"
+                id="cancelMoveShortcut" class="asaButton"><a style="color: #000; text-shadow: none;">Cancel</a></button>
+        </div>
+        <div id="setting_screen_panel" class="setting_screen">
+            <div class="HeaderPanel">
+                <a id="headerText" class="textbox_setting_text"></a>
+            </div>
+            <div class="setting_tabs">
+                <button id="bg_tab" class="button_tabs">Background</button><button id="shortcut_tab"
+                    class="button_tabs">Shortcut</button><button id="searchAPITab" class=" button_tabs">Search
+                    Engine</button><button id="general_tab" class="button_tabs">General</button><button
+                    id="developers_tab" class="button_tabs">Developers</button>
+            </div>
+            <div class="setting_scrollbar">
+                <div id="background_section">
+                    <label class="asa_toggle_switch">
+                        <input id="display_video_checked" type="checkbox">
+                        <span class="toggle_index">
+                            <a class="setting_name">Video Wallpaper</a>
+                        </span>
+                    </label>
+                    <label style="display: block;" id="video_sound_toggle" class="asa_toggle_switch">
+                        <input id="sound_video_checked" type="checkbox">
+                        <span class="toggle_index">
+                            <a class="setting_name">Video Wallpaper Sound</a>
+                        </span>
+                    </label>
+
+                    <div id="WallpaperSliderDiv" style="width: 100%; margin-top: 15px; padding-left: 5px;">
+                        <a id="WallpaperValueLable" class="sliderText">aa</a>
+                        <input id="WallpaperVolume" class="asaSlider" type="range" min="0" max="100">
+                    </div>
+
+                    <button id="openBGOption" class="asaButton"><a>Background
+                            Option</a></button>
+                </div>
+
+                <div id="general_section">
+                    <label class="asa_toggle_switch">
+                        <input id="keyboard_sound_checked" type="checkbox">
+                        <span class="toggle_index">
+                            <a class="setting_name">Keyboard Sounds</a>
+                        </span>
+                    </label>
+                    <label class="asa_toggle_switch">
+                        <input id="chemistryClockChecked" type="checkbox">
+                        <span class="toggle_index">
+                            <a class="setting_name">Chemistry Clock</a>
+                        </span>
+                    </label>
+                    <label class="asa_toggle_switch">
+                        <input id="get_title_icon_from_other_website" type="checkbox">
+                        <span class="toggle_index">
+                            <a class="setting_name">Get TitleIcon From Website URL</a>
+                        </span>
+                    </label><br>
+                    <div class="textbox_url_panel">
+                        <a class="textbox_setting_text">NewTab Title Icon:</a><br>
+                        <input autocomplete="off" class="setting_textbox_url" id="newtab_icon"
+                            placeholder="Enter the URL of the image or website to make the title icon">
+                    </div>
+                    <div class="textbox_url_panel">
+                        <a class="textbox_setting_text">NewTab Title Name:</a><br>
+                        <input autocomplete="off" class="setting_textbox_url" id="newtab_title_name"
+                            placeholder="Tab title">
+                    </div>
+                    <div class="textbox_url_panel">
+                        <a class="textbox_setting_text">Clock Font-URL:</a><br>
+                        <input autocomplete="off" class="setting_textbox_url" id="font_url_value"
+                            placeholder="Paste the Font URL to be able to change the font of the clock">
+                    </div>
+
+                    <div class="textbox_url_panel">
+                        <a class="textbox_setting_text">Date Font-URL:</a><br>
+                        <input autocomplete="off" class="setting_textbox_url" id="date_font_url_value"
+                            placeholder="Paste the Font URL to be able to change the font of the date">
+                    </div>
+                </div>
+                <div id="searchQuerySection">
+                    <div class="searchQuery">
+                        <input style="position: absolute; top: 5px; left: 10; width: calc(70% - 117px); height: 30px;"
+                            autocomplete="off" class="setting_textbox_url" id="searchAPIinput"
+                            placeholder="Add search query to the website you want"> <input
+                            style="position: absolute; top: 5px; left: calc(70% - 118px + 15px); width: calc(30% - 5px); height: 30px;"
+                            autocomplete="off" class="setting_textbox_url" id="searchNameInput"
+                            placeholder="Search Name">
+                        <div style="position: absolute; right: 15px; top: -5px;">
+                            <button style="right: 0px;" id="addSearchQuery" class="asaButton"><a>Add</a></button>
+                            <button style="right: 0px;" id="searchTextBox" class="asaButton"><a>Search</a></button>
+                        </div>
+                    </div>
+
+                    <div id="asaCustomSearchQueryTextbox"></div>
+                </div>
+
+                <div id="shortcut_section">
+                    <div id="asaCustomShortcut">
+                        <div class="searchQuery">
+                            <input
+                                style="position: absolute; top: 5px; left: 10; width: calc(100% - 117px); height: 30px;"
+                                autocomplete="off" class="setting_textbox_url" id="shortcutURLInput"
+                                placeholder="Add the website you want to the shortcut">
+                            <div style="position: absolute; right: 15px; top: -5px;">
+                                <button style="right: 0px;" id="addShortcut" class="asaButton"><a>Add</a></button>
+                                <button style="right: 0px;" id="searchShorcutTextBox"
+                                    class="asaButton"><a>Search</a></button>
+                            </div>
+                        </div>
+
+                        <div id="asaCustomShortcutStack"></div>
+                    </div>
+                </div>
+
+                <div id="developers_section">
+                </div>
+            </div>
+            <button class="asaFilterButton" id="asafliter_setting_screen"><span class="fa fa-picture-o"></span></button>
+            <button class="closeButton" id="close_button"><span class="fa fa-times"></span></button>
+            <button class="asaDone" id="save_and_close"><span class="fa fa-angle-left"></span><a>Done</a></button>
+        </div>
+    </div>
+    <div id="background_fliter_screen" class="background_fliter_screen">
+        <div class="fliter_panel">
+            <div class="fliter_slider_panel">
+                <a class="slider_fliter_setting_name">Brightness:</a>
+                <input class="asa_setting_slider" id="get_brightness_slider_value" min="0" max="200" type="range">
+                <a id="view_brightness_value" class="slider_percent_setting_name"></a>
+            </div><br>
+            <div class="fliter_slider_panel">
+                <a class="slider_fliter_setting_name">Blur:</a>
+                <input class="asa_setting_slider" id="get_blur_slider_value" min="0" max="100" type="range">
+                <a id="view_blur_value" class="slider_percent_setting_name"></a>
+            </div><br>
+            <div class="fliter_slider_panel">
+                <a class="slider_fliter_setting_name">Contrast:</a>
+                <input class="asa_setting_slider" id="get_contrast_slider_value" min="100" max="200" type="range">
+                <a id="view_contrast_value" class="slider_percent_setting_name"></a>
+            </div><br>
+            <div class="fliter_slider_panel">
+                <a class="slider_fliter_setting_name">Grayscale:</a>
+                <input class="asa_setting_slider" id="get_grayscale_slider_value" min="0" max="100" type="range">
+                <a id="view_grayscale_value" class="slider_percent_setting_name"></a>
+            </div><br>
+            <div class="fliter_slider_panel">
+                <a class="slider_fliter_setting_name">Hue:</a>
+                <input class="asa_setting_slider" id="get_hue_slider_value" min="0" max="180" type="range">
+                <a id="view_hue_value" class="slider_percent_setting_name"></a>
+            </div><br>
+            <div class="fliter_slider_panel">
+                <a class="slider_fliter_setting_name">Invert:</a>
+                <input class="asa_setting_slider" id="get_invert_slider_value" min="0" max="100" type="range">
+                <a id="view_invert_value" class="slider_percent_setting_name"></a>
+            </div><br>
+            <div class="fliter_slider_panel">
+                <a class="slider_fliter_setting_name">Saturate:</a>
+                <input class="asa_setting_slider" id="get_saturate_slider_value" min="0" max="200" type="range">
+                <a id="view_saturate_value" class="slider_percent_setting_name"></a>
+            </div><br>
+            <div class="fliter_slider_panel">
+                <a class="slider_fliter_setting_name">Sepia:</a>
+                <input class="asa_setting_slider" id="get_sepia_slider_value" min="0" max="100" type="range">
+                <a id="view_sepia_value" class="slider_percent_setting_name"></a>
+            </div><br>
+            <div class="save_and_reset_button">
+                <button id="close_fliter_screen_bottom_left" class="exit_button filter_exit_button">Save &
+                    Done</button><button id="reset_to_default_fliter_screen_bottom_left"
+                    class="exit_button filter_exit_button filter_exit_button_left">Reset to Default</button>
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute; left: 50%; color: #FFF;">
+        <a id="viewLunarDate"></a>
+    </div>
+    <div id="loadingScreen" class="loadingScreen">
+        <span class="loadingCircle"></span>
+    </div>
+</body>
+
+<script src="newtab_action.js"></script>
+<script src="background_fliter_setting.js"></script>
+<script src="weather.js"></script>
+<script src="shortcut.js"></script>
+<script src="customSearchQuery.js"></script>
+
+</html>

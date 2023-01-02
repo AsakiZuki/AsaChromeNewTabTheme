@@ -1,0 +1,984 @@
+@font-face {
+    font-family: MinecraftTen;
+    src: url(../font/minecraftTen/minecraft-ten.ttf);
+}
+
+/* Element load animation */
+@keyframes clockPanel {
+    0% {
+        opacity: 0;
+        top: calc(48.5% - 25px);
+    }
+
+    50% {
+        opacity: 0;
+        top: calc(48.5% - 25px);
+    }
+
+    100% {
+        opacity: 1;
+        top: 48.5%;
+    }
+}
+
+@keyframes datePanel {
+    0% {
+        bottom: calc(0% - 50px);
+        transform: translateX(-50%)translateY(-50%);
+    }
+
+    25% {
+        bottom: calc(0% - 50px);
+        transform: translateX(-50%)translateY(-50%)rotateX(180deg);
+    }
+
+    100% {
+        bottom: 0%;
+        transform: translateX(-50%)translateY(-50%);
+    }
+}
+
+@keyframes rightPanelTop {
+    0% {
+        right: -250px;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        right: -250px;
+        top: -40px;
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        right: 5px;
+        top: 5px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rightPanel {
+    0% {
+        right: -250px;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        right: -250px;
+        transform: rotate(270deg);
+    }
+
+    100% {
+        right: 5px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes leftPanel {
+    0% {
+        left: -250px;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        left: -250px;
+        transform: rotate(-270deg);
+    }
+
+    100% {
+        left: 5px;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes leftPanelTop {
+    0% {
+        left: -250px;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        left: -250px;
+        transform: rotate(270deg);
+    }
+
+    100% {
+        left: 5px;
+        transform: rotate(0deg);
+    }
+}
+
+/* Element */
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+*:focus-visible {
+    outline: none;
+}
+
+span.debug_panel a {
+    width: 200px;
+    position: absolute;
+}
+
+span.debug_panel a.debug_bottom {
+    top: 10px;
+}
+
+span.debug_panel {
+    padding-left: 5px;
+    height: 25px;
+    width: 200px;
+}
+
+div.background_fliter_screen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+div.save_and_reset_button {
+    padding-top: 15px;
+    width: 100%;
+}
+
+button.filter_exit_button {
+    width: calc(50% - 1px);
+}
+
+button.filter_exit_button_left {
+    transform: translateX(2px);
+}
+
+span.fliter_setting {
+    position: relative;
+    text-align: center;
+    left: 30px;
+    top: 0%;
+    font-family: genshinImpact;
+    font-size: 10px;
+    height: 25px;
+    width: 200px;
+}
+
+a.slider_fliter_setting_name {
+    font-family: genshinImpact;
+    position: absolute;
+    padding-top: 3px;
+    left: 10px;
+}
+
+a.slider_percent_setting_name {
+    font-family: genshinImpact;
+    position: absolute;
+    padding-top: 4px;
+    right: 10px;
+}
+
+input.asa_setting_slider {
+    position: absolute;
+    transform: translateY(6px);
+    height: 6px;
+    appearance: none;
+    border-radius: 25px;
+    right: 48px;
+}
+
+input.asa_setting_slider::-webkit-slider-thumb {
+    appearance: none;
+    background-color: #0065FF;
+    border-radius: 25px;
+    width: 15px;
+    height: 15px;
+}
+
+div.fliter_slider_panel {
+    height: 5px;
+    width: 240px;
+}
+
+@font-face {
+    font-family: genshinImpact;
+    src: url(https://static.wikia.nocookie.net/gensin-impact/images/6/65/Genshin_Impact_Font.woff/revision/latest?cb=20220825065214);
+}
+
+@font-face {
+    font-family: sourceSansPro;
+    src: url(../font/sourceSansPro/SourceSansPro-Light.ttf);
+}
+
+@font-face {
+    font-family: lora;
+    src: url(../font/lora/Lora-Medium.ttf);
+}
+
+a.cityName {
+    font-size: 10px;
+    font-family: 'lora';
+}
+
+img.weather_icons {
+    position: absolute;
+    right: 3px;
+    bottom: 1px;
+    color: #FFF;
+    height: 25px;
+    width: 25px;
+}
+
+a.weatherTemperature {
+    font-size: 10px;
+    font-family: 'lora';
+}
+
+div.asaWeatherPanel {
+    color: #FFFFFF;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: #00000085;
+    border-radius: 2.5px;
+    padding: 2px 32px 2px 5px;
+    border-style: solid;
+    color: #FFFFFf;
+    border-width: 1px;
+}
+
+div.fliter_panel {
+    position: absolute;
+    padding: 15px;
+    color: #FFFFFF;
+    font-family: genshinImpact;
+    right: 5px;
+    top: 5px;
+    background-color: #00000085;
+    border-radius: 2.5px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    border-width: 1px;
+}
+
+body.newtab_theme {
+    background-color: #000000;
+    overflow: hidden;
+    margin: 0;
+    user-select: none;
+}
+
+img.asaimage_background {
+    background-color: #000000;
+    border-style: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+video.video_background {
+    position: absolute;
+    display: none;
+    transform: translateX(-50%)translateY(50%);
+    left: 50%;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+iframe.youtube_wallpaper {
+    position: absolute;
+    border-style: none;
+    filter: brightness(50%);
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+div.search_panel {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+div.search_panel button.search_button:hover {
+    background-color: #25252575;
+}
+
+button.search_button {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #00000075;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    border-radius: 2.5px;
+    height: 25px;
+    width: 25px;
+    font-size: 10px;
+    transition: 0.5s;
+}
+
+@keyframes asaSearchBar {
+    0% {
+        width: 0px;
+        opacity: 0;
+    }
+
+    55% {
+        width: 0px;
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 150px;
+        opacity: 1;
+    }
+}
+
+input.searchbar {
+    font-size: 10px;
+    padding-left: 3.5px;
+    color: #FFFFFF;
+    opacity: 1;
+    transition: 1s;
+    position: absolute;
+    top: 0px;
+    left: 27.5px;
+    border-radius: 2.5px;
+    border-color: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    height: 25px;
+    width: 150px;
+    background-color: #00000075;
+    transition-timing-function: ease-in-out;
+}
+
+input.searchbar:hover {
+    background-color: #25252575;
+}
+
+input.searchbar:focus-visible {
+    outline: none;
+}
+
+input.searchbar::placeholder {
+    color: #FFFFFF85;
+    transform: translateX(-50%)translateY(50%);
+    position: absolute;
+    left: 42.5px;
+    top: 0px;
+    margin: 0px;
+    font-size: 10px;
+}
+
+.fa {
+    color: #FFFFFF;
+}
+
+@keyframes asaSelectDropdown {
+    0% {
+        left: 30px;
+        opacity: 0;
+    }
+
+    55% {
+        left: 30px;
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 180px;
+    }
+}
+
+select.asa_select_dropdown {
+    cursor: pointer;
+    transition: 1s;
+    width: 75px;
+    height: 25px;
+    text-align: center;
+    appearance: none;
+    border-radius: 2.5px;
+    border-color: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 10px;
+    position: absolute;
+    left: 180px;
+    color: #FFFFFF;
+    background-color: #00000075;
+    opacity: 1;
+    transition-timing-function: ease-in-out;
+}
+
+select.asa_select_dropdown:focus-visible {
+    outline: none;
+}
+
+select.asa_select_dropdown:hover {
+    background-color: #25252575;
+}
+
+option {
+    border-radius: 2.5px;
+    background-color: #000000;
+    font-size: 10px;
+    height: 25px;
+}
+
+option:focus-visible {
+    outline: none;
+}
+
+/* Clock Panel */
+div.clock_panel {
+    color: #FFFFFF;
+    position: absolute;
+    top: 48.5%;
+    left: 50%;
+    width: max-content;
+    font-size: 75px;
+    transform: translateX(-50%)translateY(-50%);
+}
+
+div.date_panel {
+    width: max-content;
+    color: #FFFFFF;
+    font-size: 20px;
+    position: absolute;
+    transform: translateX(-50%)translateY(-50%);
+    left: 50%;
+    bottom: 0%;
+}
+
+a.asa_time_clock {
+    font-family: Asa_customfont_clock;
+    text-shadow: 2px 2px #00000085;
+}
+
+a.asa_time_clock_seconds {
+    font-size: 45px;
+    font-family: Asa_customfont_clock;
+    text-shadow: 2px 2px #00000085;
+}
+
+a.asa_time_day {
+    transform: translateX(-50%);
+    font-family: Asa_customfont_date;
+    text-shadow: 2px 2px #00000085;
+}
+
+a.day_text {
+    font-family: Asa_customfont_date;
+    font-size: 16.5px;
+}
+
+div.textbox_panel {
+    position: relative;
+    left: 8px;
+    height: 45px;
+    padding-bottom: 8px;
+}
+
+div.textbox_panel_header {
+    padding-top: 0px;
+    position: relative;
+    top: 15px;
+    left: 8px;
+    height: 18px;
+}
+
+input.setting_textbox {
+    color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+    top: 24px;
+    margin-left: 0px;
+    width: calc(100% - 20px);
+    position: absolute;
+    background-color: #00000075;
+    border-style: solid;
+    border-radius: 0px;
+    border-color: #FFFFFF;
+    border-width: 1px;
+}
+
+input.setting_textbox:focus-visible {
+    outline: none;
+}
+
+input.setting_textbox:hover {
+    background-color: #25252575;
+}
+
+input.setting_textbox::placeholder {
+    color: #9F9F9F;
+}
+
+/* Setting Section */
+div.setting_panel {
+    width: min-content;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+button.setting_button {
+    background-color: #00000075;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    border-radius: 2.5px;
+    height: 25px;
+    width: 25px;
+    font-size: 12px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+button.setting_button:hover {
+    background-color: #25252575;
+}
+
+button.setting_button:hover span.setting_hover_text {
+    opacity: 1;
+    visibility: visible;
+    right: 30px;
+}
+
+span.setting_hover_text {
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #00000075;
+    position: absolute;
+    right: 25px;
+    width: 50px;
+    height: 13.5px;
+    color: #FFFFFF;
+    border-radius: 2.5px;
+    font-size: 10px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    border-width: 1px;
+    padding-top: 1.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+
+div.full_screen_setting {
+    background-color: #00000075;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+span.setting_screen {
+    border-color: #FFFFFF;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0px 12px 12px 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    width: 75%;
+    height: 75%;
+    background-color: #000000AA;
+}
+
+div.save_and_close_setting {
+    position: absolute;
+    right: 10px;
+    bottom: 6.5px;
+}
+
+button.exit_button {
+    cursor: pointer;
+    background-color: #00000075;
+    color: #FFFFFF;
+    height: 25px;
+    border-color: #FFFFFF;
+    border-width: 1px;
+    border-style: groove;
+    transition: 0.5s;
+}
+
+button.exit_button:hover {
+    background-color: #25252575;
+}
+
+@keyframes setting_background {
+    from {
+        background-color: #00000000;
+    }
+
+    to {
+        background-color: #00000075;
+    }
+}
+
+@keyframes open_setting {
+    from {
+        opacity: 0;
+        top: 100%;
+    }
+
+    to {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+/* Webside Shortcut */
+
+div.webside_shortcut {
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 23px;
+    height: 23px;
+    background-color: #00000075;
+    border-style: solid;
+    border-radius: 2.5px;
+    border-color: #FFFFFF;
+    border-width: 1px;
+    transition: 0.5s;
+}
+
+div.webside_shortcut:hover {
+    background-color: #29292975;
+}
+
+div.shortcutScreenTableBackground {
+    position: absolute;
+    left: 6px;
+    bottom: 0px;
+    width: 40%;
+    height: calc(225px + 35px);
+    max-height: 75%;
+    border-radius: 5px;
+}
+
+div.shortcutScreenTable {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: calc(100% - 35px);
+    background-color: #000000ab;
+    border-radius: 5px;
+    outline: 1px solid #FFF;
+}
+
+div.SearchBarPanel {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: 30px;
+}
+
+div.shortcutItems {
+    position: absolute;
+    bottom: 8px;
+    overflow-y: auto;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 49px);
+}
+
+div.shortcutItems::-webkit-scrollbar {
+    background-color: #FFF0;
+    width: 6px;
+}
+
+div.shortcutItems::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.449);
+    border-radius: 25px;
+}
+
+button.OpenURLButton {
+    width: 100%;
+    margin-top: 0.5px;
+    margin-bottom: 0.5px;
+    height: 34px;
+    border-radius: 5px;
+    border: 1px solid #FFF;
+    background-color: #00000082;
+}
+
+button.OpenURLButton:hover {
+    background-color: #26262682;
+}
+
+button.OpenURLButton img {
+    position: absolute;
+    border-right: 1px solid #FFF;
+    padding-right: 5px;
+    position: relative;
+    right: calc(50%);
+    transform: translateY(-50%)translateX(50%);
+    top: calc(50%);
+    width: 25px;
+    height: 25px;
+}
+
+div.URLTextPanel {
+    width: calc(100% - 38px);
+    position: relative;
+    bottom: 11px;
+    left: 35px;
+    height: 100%;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+div.URLTextPanel a {
+    position: absolute;
+    color: #FFF;
+    font-size: 10px;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+div.asaShortcutDiv {
+    overflow: hidden;
+}
+
+a.shortcutTitle {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-family: genshinImpact;
+    color: #FFF;
+    font-size: 10px;
+}
+
+input.ShortcutSearchBar {
+    position: absolute;
+    top: 17px;
+    left: 0px;
+    background-color: #FFF0;
+    color: #FFF;
+    padding: 1px 0px 0px 1px;
+    font-size: 10px;
+    border: none;
+    outline: none;
+    width: calc(100% - 72.5px);
+    border-bottom: 1px solid #FFF;
+}
+
+input.ShortcutSearchBar::placeholder {
+    font-style: oblique;
+}
+
+button.clearSearchBtn {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    background-color: #FFF0;
+    font-size: 10px;
+    color: #FFF;
+    width: 70px;
+    border: 1px solid #FFF;
+}
+
+i.arrow_button {
+    top: calc(50% - 1px);
+    transform: translateX(-50%)translateY(-50%);
+    position: absolute;
+    font-size: 18px;
+    left: 50%;
+    transition: 0.6s;
+}
+
+span.button_shortcut {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    bottom: calc(100% + 1px);
+    transition: 0.8s;
+}
+
+div.slider_panel {
+    position: relative;
+    top: 15px;
+    height: 2px;
+    padding-left: 8.0px;
+}
+
+div.top_slider {
+    height: 5px;
+}
+
+div.slider_panel a {
+    color: #FFFFFF;
+    position: absolute;
+    top: -2px;
+}
+
+div.slider_panel a.slider_value {
+    right: 8px;
+}
+
+div.slider_panel input {
+    appearance: none;
+    border-radius: 10px;
+    position: absolute;
+    left: 125px;
+    height: 6.5px;
+    width: calc(100% - 167px);
+}
+
+div.slider_panel input::-webkit-slider-thumb {
+    appearance: none;
+    height: 17px;
+    width: 17px;
+    background-color: #000000;
+    border-radius: 4.5px;
+    border-width: 1px;
+    border-color: #9F9F9F;
+    border-style: solid;
+}
+
+div.slider_panel input::-webkit-slider-thumb:hover {
+    background-color: #101010;
+}
+
+button.buttonAddAndMinus {
+    position: relative;
+    left: 7.5px;
+    bottom: 1px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #00000085;
+    color: #FFF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFF;
+}
+
+button.buttonAddAndMinus:hover {
+    background-color: #25252585;
+}
+
+input.asaTextBox:focus-visible {
+    outline: none;
+}
+
+input.asaTextBox::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+input.asaTextBox {
+    position: relative;
+    left: 7.5px;
+    bottom: 1px;
+    padding: 5px;
+    background-color: #00000085;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #FFF;
+    color: #FFF;
+}
+
+span.settingName {
+    position: relative;
+    left: 7.5px;
+    bottom: 2.5px;
+    color: #FFF;
+}
+
+div.chemistryDesign {
+    height: 85px;
+    width: 85px;
+    border: 2.5px solid #FFF;
+    background-color: #000000b3;
+}
+
+a.chemicalElementName {
+    font-family: sans-serif;
+    font-size: 38px;
+    font-weight: 650;
+    position: absolute;
+    top: 1px;
+    left: 5px;
+}
+
+a.atomicNumber {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+a.elementalName {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    transform: translateX(-50%);
+}
+
+a.atomicBlock {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    transform: translateX(-50%);
+}
+
+button {
+    cursor: pointer;
+}
+
+button.moveSelecter {
+    visibility: hidden;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 63.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.696);
+    border: 0.5px solid #FFF;
+}
+
+div.textboxUrlPanel:hover button.moveSelecter {
+    visibility: visible;
+}
+
+div.asaHoverSelected {
+    outline: none;
+}
+
+div.asaHoverSelected:hover {
+    outline: 2px solid #F00;
+}

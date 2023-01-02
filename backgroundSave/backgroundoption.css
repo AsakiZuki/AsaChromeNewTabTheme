@@ -1,0 +1,271 @@
+/* Header style */
+
+@font-face {
+    font-family: genshinImpact;
+    src: url(https://static.wikia.nocookie.net/gensin-impact/images/6/65/Genshin_Impact_Font.woff/revision/latest?cb=20220825065214);
+}
+
+@font-face {
+    font-family: minecraftTen;
+    src: url(../font/minecraftTen/minecraft-ten.ttf);
+}
+
+body {
+    margin: 0px;
+    padding: 5px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom, rgb(6, 2, 81), rgb(4, 1, 32), rgb(0, 0, 0));
+    user-select: none;
+}
+
+* {
+    font-family: genshinImpact;
+    color: #FFF;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.571);
+}
+
+/* Style Design */
+
+div.Headerpanel {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: linear-gradient(to bottom, rgb(30, 0, 58), rgba(3, 2, 33, 0.575), rgba(0, 0, 0, 0));
+    border-bottom: 3px solid #FFF;
+    height: 20px;
+    width: 100%;
+}
+
+div.sectionPanel {
+    overflow-y: auto;
+    position: absolute;
+    left: 10%;
+    top: 32px;
+    width: 80%;
+    height: calc(100% - 45px);
+}
+
+div.sectionPanel::-webkit-scrollbar {
+    background-color: #FFF0;
+    width: 5px;
+}
+
+div.sectionPanel::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, #0000, red 10% 22%, yellow, blue 78% 90%, #0000);
+    background-position: 120%;
+    border-radius: 0px;
+}
+
+input.asaURLTextBox {
+    outline: none;
+    background-color: transparent;
+    padding: 5px 0px;
+    padding-bottom: 3px;
+    border: none;
+    font-family: monospace;
+    border-bottom: 1px solid #FFF;
+    font-size: 10px;
+    width: calc(100% - 52px);
+}
+
+button.buttonStyleIcon {
+    background-color: transparent;
+    height: 22px;
+    width: 22px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid #FFF
+}
+
+button.buttonStyleIcon span {
+    text-shadow: none;
+    transform: translateX(-2px)translateY(1px);
+}
+
+div.imagePreview {
+    position: relative;
+    right: 62px;
+    transform: translateY(-20px);
+    border-radius: 15px 0px 15px 15px;
+    overflow: hidden;
+    height: 150px;
+    width: 266.666666667px;
+    background-color: black;
+    outline: 2.5px solid #FFF;
+    position: absolute;
+    z-index: 10;
+
+    animation: asaPreview 1s ease-out;
+}
+
+div.imagePreview div {
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes asaPreview {
+    0% {
+        right: 50px;
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    100% {
+        right: 62px;
+        opacity: 1;
+    }
+}
+
+/* Header style */
+
+div.Headerpanel div {
+    position: absolute;
+    right: 10.9%;
+    top: 1px;
+}
+
+div.Headerpanel div button {
+    height: 18px;
+    width: 18px;
+    background-color: rgba(0, 0, 0, 0.544);
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div.Headerpanel div button span {
+    font-size: 10px;
+    transform: translateX(-2px);
+}
+
+div#addURLScreen {
+    position: absolute;
+    transform: translateX(-50%)translateY(-50%);
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 225px;
+    background-color: rgb(34, 34, 34);
+    outline: 1px solid #000;
+
+    border-top: 30px solid rgb(72, 72, 72);
+    border-bottom: 42px solid rgb(72, 72, 72);
+    padding: 3px;
+}
+
+button.minecraftButton {
+    background-color: #FFF;
+    height: 27px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-shadow: none;
+    color: #000;
+    font-size: 10px;
+    outline: 1px solid #000;
+    border: none;
+    border-bottom: 3px solid rgb(66, 66, 66);
+}
+
+button.minecraftButton:active {
+    height: 24px;
+    border-bottom: 0px solid rgb(66, 66, 66);
+    transform: translateY(3px);
+}
+
+input.addBackgroundTextbox {
+    margin-top: 3px;
+    background-color: rgb(42, 42, 42);
+    text-shadow: none;
+    outline: 1px solid #000;
+    border: none;
+    font-size: 8px;
+    width: calc(100% - 8px);
+    transform: translateX(4px);
+    padding: 5px;
+    border-top: 3px solid rgb(20, 20, 20);
+}
+
+button.closeButton {
+    background-color: #0000;
+    border: none;
+    width: 20px;
+    height: 20px;
+    outline: none;
+    position: absolute;
+    top: -25px;
+    right: 7px;
+}
+
+button.closeButton:hover {
+    background-color: rgba(255, 255, 255, 0.316);
+}
+
+button.closeButton:active {
+    background-color: rgba(0, 0, 0, 0.316);
+}
+
+button.closeButton span {
+    text-shadow: none;
+    transform: translateX(-1px);
+}
+
+div#addURLScreenBG {
+    background-color: rgba(0, 0, 0, 0.589);
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+input.asa::placeholder {
+    font-style: oblique;
+}
+
+div.saveNocation {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 12px;
+    background-image: linear-gradient(to right bottom, rgb(156, 0, 133), rgb(0, 138, 135), rgb(193, 177, 38), rgb(160, 0, 0), rgb(156, 0, 133), rgb(0, 138, 135), rgb(193, 177, 38));
+    background-size: 500% 500%;
+    border: 1px solid rgb(255, 0, 174);
+    width: 125px;
+    text-shadow: none;
+    border-radius: 12px;
+    font-family: monospace;
+    visibility: hidden;
+    opacity: 0;
+    text-shadow: 1px 1px #000;
+}
+
+@keyframes asaSaved {
+    0% {
+        visibility: hidden;
+        background-position: left;
+        left: -250px;
+        opacity: 1;
+    }
+
+    15% {
+        visibility: visible;
+        left: 8px;
+    }
+
+    85% {
+        visibility: visible;
+        left: 8px;
+    }
+
+    100% {
+        visibility: hidden;
+        left: -250px;
+        background-position: right bottom;
+        opacity: 1;
+    }
+}

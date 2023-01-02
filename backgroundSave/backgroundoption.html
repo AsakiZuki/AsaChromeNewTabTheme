@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Settings</title>
+    <link rel="stylesheet" href="backgroundoption.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="thisBody">
+    <div class="Headerpanel">
+        <h5 style="position: absolute; top: -13px; left: 10%; padding-bottom: 3px; width: calc(80% + 2px);">
+            Random Background Settings</h5>
+
+        <div>
+            <input id="searchBackgroundURL" class="asa"
+                style="font-size: 8px; text-shadow: none; background-color: #0000; border: none; outline: none; width: 175px; border-bottom: 1px solid #fff;"
+                placeholder="Search your item here...">
+            <button id="addNewBackground">
+                <span class="fa fa-plus"></span>
+            </button>
+            <button id="saveButton">
+                <span class="fa fa-save"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="sectionPanel" id="backgroundSetting">
+    </div>
+
+    <div id="addURLScreenBG">
+        <div id="addURLScreen">
+            <a style="font-size: 12px; position: absolute; top: -22px; left: 48px; text-shadow: none;">Add
+                new
+                Background</a>
+
+            <button id="closeButton" class="closeButton">
+                <span class="fa fa-close"></span>
+            </button>
+
+            <a id="warningToAdd"
+                style="font-family:sans-serif; text-shadow: none; font-size: 8px; position: relative; left: 3px;">Add
+                new background url for more
+                random
+                backgrounds</a>
+            <input id="urlInput" placeholder="Input background URL" class="addBackgroundTextbox">
+
+            <button
+                style="position: absolute; bottom: -35px; transform: translateX(-50%); left: 50%; width: calc(100% - 14px);"
+                class="minecraftButton" id="addBgButton">Add Background URL</button>
+        </div>
+    </div>
+
+    <div id="saveNotication" class="saveNocation"></div>
+</body>
+
+<script src="backgroundRandomize.js"></script>
+
+</html>

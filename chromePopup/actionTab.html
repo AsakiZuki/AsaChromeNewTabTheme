@@ -1,0 +1,82 @@
+<html class="asaBody" lang="en">
+
+<head>
+    <link rel="stylesheet" href="./tabManage.css">
+    <link rel="stylesheet" href="./actionTab.css">
+    <link rel="stylesheet" href="../assets/settingStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="extensionActionPOPUP">
+    <div id="QRGenerateScreen" style="width: 100%; height: 235px;">
+        <a class="ExtensionTitle">Asa NewTab</a>
+        <div class="screenTabs">
+            <div id="QRGenerateTab" class="QRGenerateTab">
+                <a>Generate QR Code Tab</a>
+                <div id="QRCodeGenerate">
+                    <div
+                        style="background-color: rgb(65, 65, 65);; padding: 8px; outline: 2px solid #000; border-top: 5px solid rgb(36, 36, 36);">
+                        You haven't generated a QR code yet!
+                    </div>
+                </div>
+            </div>
+
+            <div class="sectionTab">
+                <a
+                    style="font-size: 13.3px; transform: translateX(-50%); position: absolute; left: 50%; border-bottom: 1px solid #FFF; padding-bottom: 2px;">URL
+                    current
+                    website</a><br>
+                <div style="width: 100%; height: 12px;"></div>
+                <input
+                    style="background-color: rgb(65, 65, 65); outline: none; padding: 10px 2px 10px 2px; width: 100%; outline: 2px solid #000; border: 0px; border-top: 5px solid rgb(36, 36, 36);"
+                    placeholder="Website URL" id="currentWebsiteURL">
+
+                <input
+                    style="background-color: rgb(65, 65, 65); outline: none; padding: 10px 2px 10px 2px; width: 100%; outline: 2px solid #000; border: 0px; border-top: 5px solid rgb(36, 36, 36); margin-top: 5px;"
+                    placeholder="Website Title" id="currentWebsiteTitle">
+
+                <div style="height: 1px;"></div>
+
+                <div style="height: 30px;">
+                    <button style="cursor: pointer; margin-top: 115px; width: calc(50% - 6px); position: absolute;"
+                        class="DownloadQRCode" id="addCurrentWebsiteToShortcut">Add to
+                        Shortcut
+                    </button>
+
+                    <a class="shortcutNotication" id="shortcutNotication"
+                        style="position: relative; opacity: 0; visibility: hidden; width: 50%; top: 350%; left: 15px; z-index: 99; background-color: #000C; padding: 12px; margin-bottom: 5px; border-radius: 10px 10px 10px 10px;">
+                        You cannot add Shortcuts because this URL is not a website :')</a>
+
+                    <button class="DownloadQRCode"
+                        style="cursor: pointer; width: calc(50% - 6px); position: absolute; margin-top: 115px; left: calc(50% + 1px);"
+                        id="generateQRCodeFromInput">Generate QR Code</button>
+                </div>
+
+                <div style="height: 15px;"></div>
+
+                <button style="cursor: pointer; position: relative;" class="DownloadQRCode" id="getURLHistory">URL
+                    History</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="TabManageScreen" style="width: 100%; height: 254px;">
+        <a class="ExtensionTitle">Manage Tabs</a>
+        <div id="manageTabStack"
+            style="position:absolute; padding-top: 5px; width: calc(100% - 20px); height: calc(100% - 0px); position: relative; top: 40px; border-top: 1px solid #FFF;">
+        </div>
+    </div>
+</body>
+
+<div
+    style="position: absolute; bottom: 0px; left: 0px; padding: 4px; width: calc(100% - 8px); height: 45px; outline: 1px solid #FFF;">
+    <button id="TabManageSection" style="top: -5px; padding: 15px; width: calc(50% - 9px);" class="asaButton"><a
+            style="position:relative; color: #000; font-size: 18px; bottom: 10px;">Manage tabs</a></button>
+    <button id="QRManageSection" style="top: -5px; padding: 15px; width: calc(50% - 9px);" class="asaButton"><a
+            style="position:relative; color: #000; font-size: 18px; bottom: 10px;">QR
+            Generate</a></button>
+</div>
+
+<script src="actionTab.js"></script>
+
+</html>

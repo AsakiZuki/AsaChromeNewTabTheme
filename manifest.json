@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "NewTab Theme",
+    "description": "NewTab",
+    "version": "1.0",
+    "permissions": [
+        "contextMenus",
+        "storage",
+        "tabs",
+        "activeTab",
+        "scripting",
+        "downloads",
+        "notifications",
+        "geolocation",
+        "cookies"
+    ],
+    "icons": {
+        "128": "asaNewtab-128.png"
+    },
+    "chrome_url_overrides": {
+        "newtab": "assets/newtab.html"
+    },
+    "background": {
+        "service_worker": "runOnBackground/asaExtensionBG.js",
+        "type": "module"
+    },
+    "action": {
+        "default_popup": "chromePopup/actionTab.html",
+        "default_icon": "asaNewtab-128.png"
+    }
+}

@@ -1,0 +1,141 @@
+div.tabElement {
+    margin-bottom: 6px;
+    position: relative;
+    width: calc(100% - 4px);
+    left: 2px;
+    height: 45px;
+    outline: 2px solid #FFF;
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+button.removeTabButton {
+    outline: 1px solid #FFF;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 6.5px;
+    border: 5px;
+    background-color: rgba(0, 0, 0, 0.659);
+    z-index: 90;
+}
+
+button.removeTabButton:hover {
+    background-color: rgba(97, 97, 97, 0.659);
+}
+
+div.tabElement:hover {
+    background-color: rgba(87, 87, 87, 0.575);
+}
+
+div#manageTabStack {
+    overflow-y: scroll;
+    overflow-x: visible;
+}
+
+div#manageTabStack::-webkit-scrollbar {
+    background-color: #FFF0;
+    width: 0px;
+}
+
+div.webPageURL {
+    position: absolute;
+    top: 18px;
+    height: 10px;
+    width: 1000%;
+}
+
+div.openTab {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background-color: #FFF0;
+    z-index: 100;
+    width: calc(100% - 85px);
+}
+
+div.manageTabs {
+    padding-top: 8px;
+}
+
+div.asaTabManage {
+    border-radius: 5px;
+    margin-top: 8px;
+    position: relative;
+    height: 32px;
+    left: 2px;
+    width: calc(100% - 12px - 32px);
+    background-color: rgba(0, 0, 0, 0.563);
+    outline: 2px solid rgb(255, 255, 255);
+}
+
+button.massDeleteTabs {
+    position: absolute;
+    right: 4px;
+    top: 0px;
+    border-radius: 5px;
+    height: 32px;
+    width: 32px;
+    background-color: rgba(0, 0, 0, 0.563);
+    border: none;
+    outline: 2px solid rgb(255, 255, 255);
+}
+
+button.massDeleteTabs:hover {
+    background-color: rgba(117, 117, 117, 0.563);
+}
+
+div.asaTabManage img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+    width: 28px;
+    height: 28px;
+    padding-right: 4px;
+    border-right: 2px solid #FFF;
+}
+
+div.asaTabManage a.url {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 45px;
+}
+
+div.asaTabManage a.count {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 1px;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 32px;
+}
+
+
+div.asaTabManage span {
+    position: absolute;
+    width: 28px;
+    text-align: center;
+    font-size: 15px;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+}
+
+div.asaTabManageActive span {
+    transform: translateY(-50%)rotate(-90deg);
+}
+
+div.asaTabManage:hover {
+    background-color: rgba(117, 117, 117, 0.563);
+}
+
+div.sectionButton {
+    position: relative;
+}

@@ -1,0 +1,48 @@
+div.loadingScreen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+    opacity: 1;
+    visibility: visible;
+}
+
+span.loadingCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 6px;
+    border-color: #c6c6c6;
+    border-top: 6px solid #3498db;
+    animation: loadingCircle 1.5s linear infinite;
+}
+
+@keyframes loadingCircle {
+    from {
+        transform: translateX(-50%)translateY(-50%)rotate(0deg);
+    }
+
+    to {
+        transform: translateX(-50%)translateY(-50%)rotate(360deg);
+    }
+}
+
+@keyframes openScreen {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
