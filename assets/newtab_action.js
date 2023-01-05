@@ -267,14 +267,16 @@ function asa_ontime() {
     }
     var asaGetYear = date.getFullYear()
 
-    const lunarDateApi = `https://api.tuvi.dev/lich/duongam/${asaGetYear}${asaGetMonth}${asaGetDay}?key=4F675E6B-2190-4918-B4EF-3668C72F1224`
-    fetch(lunarDateApi).then((lunarDate) => lunarDate.json()).then((lunar) => {
-        let getLunarDate = lunar.data.ngayAm.replace('T00:00:00', '');
-        let getLunarDay = +getLunarDate.slice(8, 10);
-        let getLunarMonth = +getLunarDate.slice(5, 7);
-        document.getElementById("asa_date").innerHTML = `${ths[today]}, ${asaDays}${dayName} ${monthNames[asaMonths]} ${asaYears} <a style="font-size: 15px; font-family: Asa_customfont_date">(Lunar: ${getLunarDay} ${monthNames[getLunarMonth - 1]})</a>`;
-    }
-    )
+    // const lunarDateApi = `https://api.tuvi.dev/lich/duongam/${asaGetYear}${asaGetMonth}${asaGetDay}?key=4F675E6B-2190-4918-B4EF-3668C72F1224`
+    // fetch(lunarDateApi).then((lunarDate) => lunarDate.json()).then((lunar) => {
+    //     let getLunarDate = lunar.data.ngayAm.replace('T00:00:00', '');
+    //     let getLunarDay = +getLunarDate.slice(8, 10);
+    //     let getLunarMonth = +getLunarDate.slice(5, 7);
+    //<a style="font-size: 15px; font-family: Asa_customfont_date">(Lunar: ${getLunarDay} ${monthNames[getLunarMonth - 1]})</a>
+    // }
+    // )
+
+    document.getElementById("asa_date").innerHTML = `${ths[today]}, ${asaDays}${dayName} ${monthNames[asaMonths]} ${asaYears}`;
 
     //Clock Panel
     if ((asaChemistryClock === null) || (asaChemistryClock === 'false')) {
@@ -556,4 +558,4 @@ if (asaRandom.length === 0) {
     }
 }
 
-asaCreditAPI()
+// asaCreditAPI()
