@@ -2,6 +2,7 @@ function detectPageLoaded2() {
     if ((document.readyState === 'loading' || document.readyState === 'interactive')) { return };
     clearInterval(asaLoad);
     document.getElementById("loadingScreen").style = "visibility: hidden; animation: openScreen 1.2s linear";
+    document.getElementById('playWhenOpen').play();
     activateAnimation();
 }
 
@@ -38,6 +39,7 @@ if (localStorage.getItem("asaSearchQuerySection") === null) {
 
 asaCreditAPI = async () => {
     const asaAPI = await fetch('https://asakizuki.github.io/asaWebSite/fetchAPI/asaCreditAPI.json');
+    if (asaAPI.status !== 200) { return };
     const asaAPIConvent = await asaAPI.json();
 
     let documentElement = "deveasa2997lopers_secasa1259tion";
@@ -558,4 +560,4 @@ if (asaRandom.length === 0) {
     }
 }
 
-// asaCreditAPI()
+asaCreditAPI()
